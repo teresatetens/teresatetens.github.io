@@ -1,16 +1,149 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>My blog</title>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="src/styles.css">
+    <meta charset="UTF-8">
+    <title>Teresa's Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="styles.css" rel ="stylesheet">
 </head>
-
 <body>
-	<div id="app"></div>
-	<script src="src/index.js">
-	</script>
-</body>
+    <div class="container">
+        <div class="logo-wrapper">
+            <div class="brand">
+                Teresa Tetens
+            </div>
+        </div>
 
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href = "index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href = "about.html">About</a>
+                </div>
+            </div>
+            <div class="right-side"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="sidebar-wrapper">
+
+                <div class="nav-link-wrapper">
+                    <a href = "anchor.html">Anchor</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href = "ingmar.html">Ironman</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href = "hannah.html">Torfrocker</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href = "learning-method.html">Learing Method</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href = "deepwork.html">Deep Work</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href = "running.html">Run or Walk</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href = "grit.html">Grit</a>
+                </div>
+
+            </div>
+
+            <div class="blog-items-wrapper">
+
+                <div class="blog-item-wrapper">
+                    <div class="blog-img-wrapper">
+                        <div class="blog-img-background" style = "background-image: url(images/blog1.jpg)"></div>
+
+                        <div class="img-text-wrapper">
+                            <div class="icon-wrapper">
+                                <img src = "images/icons/icon1.png">
+                            </div>
+                            <div class="subtitle">
+                                who, with whom and where am i? here my anchor, as a wife and mother
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-item-text">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+
+                <div class="reverse-blog-item-wrapper">
+
+                    <div class="blog-item-text">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </div>
+
+                    <div class="blog-img-wrapper">
+                        <div class="blog-img-background" style = "background-image: url(images/blog2.jpg)"></div>
+
+                        <div class="img-text-wrapper">
+                            <div class="icon-wrapper">
+                                <img src = "images/icons/icon2.png">
+                            </div>
+                            <div class="subtitle">
+                                what do i do?<br><br>learning and aspiring on the journey to be a web developer
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="blog-item-wrapper">
+                    <div class="blog-img-wrapper">
+                        <div class="blog-img-background" style = "background-image: url(images/blog3.jpg)"></div>
+
+                        <div class="img-text-wrapper">
+                            <div class="icon-wrapper">
+                                <img src = "images/icons/icon3.png">
+                            </div>
+                            <div class="subtitle">
+                                how?<br><br>#bootcamp #100DaysOfCode #DeepWork #Grit
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-item-text">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer"> </div>
+
+    </div>
+
+
+    <script>
+        const blogImages = document.querySelectorAll('.blog-img-wrapper');
+
+        blogImages.forEach(blogImage =>{
+            blogImage.addEventListener('mouseover',() =>{
+                blogImage.childNodes[1].classList.add('img-darken');
+            })
+        })
+
+        blogImages.forEach(blogImage =>{
+            blogImage.addEventListener('mouseout',() =>{
+                blogImage.childNodes[1].classList.remove('img-darken');
+            })
+        })
+
+    </script>
+
+</body>
 </html>
